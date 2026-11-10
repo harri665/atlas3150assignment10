@@ -1,10 +1,8 @@
 services:
   web:
-    image: nginx:1.27-alpine
+    build: .
+    image: atlas3150-assignment10:latest
     container_name: atlas3150-assignment10
     ports:
       - "47213:80"
-    volumes:
-      - ./index.html:/usr/share/nginx/html/index.html:ro
-      - ./style.css:/usr/share/nginx/html/style.css:ro
     restart: unless-stopped
