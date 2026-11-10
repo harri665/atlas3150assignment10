@@ -1,68 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>HTML Text Basics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+      tailwind.config = { corePlugins: { preflight: false } };
+    </script>
   </head>
   <body>
 
-    <main>
+    <a href="#main" class="absolute left-4 -top-40 focus:top-4 z-10 rounded-md bg-[#ffb25c] px-4 py-2 font-bold text-[#111318] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-white">Skip to main content</a>
 
-      <section>
-        <h1>Basic HTML Animals</h1>
+    <div class="mx-auto grid max-w-[75rem] gap-6">
 
-        <p>This is the first paragraph in our page. It introduces our animals.</p>
+      <header class="border-0 border-b border-solid border-[#444] pb-4">
+        <h1 class="text-[2.5rem] font-extrabold max-sm:text-[2rem]">HTML Animals</h1>
+        <p>Assignment 7 rebuilt as a responsive multi-column page with CSS Grid and Flexbox. + quick tailwind practice</p>
+      </header>
 
-        <h2>The Llama</h2>
-
-        <p>Our Llama is a big fan of list items. When she spies a patch of them on a web page, she will eat them like sweets, licking her lips as she goes.</p>
-
-        <h2>The Anaconda</h2>
-
-        <p>The crafty anaconda likes to slither around the page, traveling rapidly by way of anchors to sneak up on his prey.</p>
-      </section>
-
-      <section>
-        <h1>Looking at lists</h1>
-
-        <p>Turn the following list of my favorite vegetables into an unordered list.</p>
-
-        <ul>
-          <li>Cucumber</li>
-          <li>Broccoli</li>
-          <li>Asparagus</li>
-          <li>Pepper</li>
+      <nav aria-label="Page sections">
+        <ul class="m-0 flex list-none flex-col gap-2 rounded-none border-0 p-0 sm:flex-row sm:flex-wrap">
+          <li class="sm:flex-1"><a href="#basic-animals" class="block rounded-lg border-2 border-solid border-[#2a2e37] px-3 py-2 text-center font-bold text-[#ffb25c] no-underline hover:border-[#ffb25c] hover:text-white focus:border-[#ffb25c] focus:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[#ffb25c]">Basic animals</a></li>
+          <li class="sm:flex-1"><a href="#lists" class="block rounded-lg border-2 border-solid border-[#2a2e37] px-3 py-2 text-center font-bold text-[#ffb25c] no-underline hover:border-[#ffb25c] hover:text-white focus:border-[#ffb25c] focus:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[#ffb25c]">Looking at lists</a></li>
+          <li class="sm:flex-1"><a href="#advanced-animals" class="block rounded-lg border-2 border-solid border-[#2a2e37] px-3 py-2 text-center font-bold text-[#ffb25c] no-underline hover:border-[#ffb25c] hover:text-white focus:border-[#ffb25c] focus:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[#ffb25c]">Advanced animals</a></li>
         </ul>
+      </nav>
 
-        <p>Turn the following directions into an ordered list.</p>
+      <main id="main">
 
-        <ol>
-          <li>First knock on the door</li>
-          <li>When prompted, say the magic word</li>
-          <li>Wait for at least 5 seconds</li>
-          <li>Turn the handle and push</li>
-        </ol>
-      </section>
+        <section id="basic-animals" aria-labelledby="basic-animals-heading" class="scroll-mt-4 rounded-[10px] border border-solid border-[#2a2e37] bg-[#1a1d24] px-5 py-4">
+          <h2 id="basic-animals-heading" class="mb-2">Basic HTML Animals</h2>
 
-      <section>
-        <h1>Advanced HTML Animals</h1>
+          <p>This is the first paragraph in our page. It introduces our animals.</p>
 
-        <dl>
-          <dt>Llama</dt>
-          <dd>Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.</dd>
-          <dt>Anaconda</dt>
-          <dd>A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.</dd>
-          <dt>Hippopotamus</dt>
-          <dd>His description is bottomless.</dd>
-        </dl>
-      </section>
+          <h3 class="mb-0 mt-3 font-['Fraunces',Georgia,serif] text-[1.25rem] text-[#ffb25c]">The Llama</h3>
 
-    </main>
+          <p>Our Llama is a big fan of list items. When she spies a patch of them on a web page, she will eat them like sweets, licking her lips as she goes.</p>
+
+          <h3 class="mb-0 mt-3 font-['Fraunces',Georgia,serif] text-[1.25rem] text-[#ffb25c]">The Anaconda</h3>
+
+          <p>The crafty anaconda likes to slither around the page, traveling rapidly by way of anchors to sneak up on his prey.</p>
+        </section>
+
+        <section id="lists" aria-labelledby="lists-heading" class="scroll-mt-4 rounded-[10px] border border-solid border-[#2a2e37] bg-[#1a1d24] px-5 py-4">
+          <h2 id="lists-heading" class="mb-2">Looking at lists</h2>
+
+          <p>Turn the following list of my favorite vegetables into an unordered list.</p>
+
+          <ul>
+            <li>Cucumber</li>
+            <li>Broccoli</li>
+            <li>Asparagus</li>
+            <li>Pepper</li>
+          </ul>
+
+          <p>Turn the following directions into an ordered list.</p>
+
+          <ol>
+            <li>First knock on the door</li>
+            <li>When prompted, say the magic word</li>
+            <li>Wait for at least 5 seconds</li>
+            <li>Turn the handle and push</li>
+          </ol>
+        </section>
+
+        <section id="advanced-animals" aria-labelledby="advanced-animals-heading" class="scroll-mt-4 rounded-[10px] border border-solid border-[#2a2e37] bg-[#1a1d24] px-5 py-4">
+          <h2 id="advanced-animals-heading" class="mb-2">Advanced HTML Animals</h2>
+
+          <dl class="flex flex-wrap gap-4">
+            <div class="flex-[1_1_14rem] rounded-md border-0 border-l-4 border-solid border-[#ff7c76] bg-[#111318] px-4 py-3">
+              <dt>Llama</dt>
+              <dd class="m-0 mt-1">Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.</dd>
+            </div>
+            <div class="flex-[1_1_14rem] rounded-md border-0 border-l-4 border-solid border-[#ff7c76] bg-[#111318] px-4 py-3">
+              <dt>Anaconda</dt>
+              <dd class="m-0 mt-1">A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.</dd>
+            </div>
+            <div class="flex-[1_1_14rem] rounded-md border-0 border-l-4 border-solid border-[#ff7c76] bg-[#111318] px-4 py-3">
+              <dt>Hippopotamus</dt>
+              <dd class="m-0 mt-1">His description is bottomless.</dd>
+            </div>
+          </dl>
+        </section>
+
+      </main>
+
+      <aside aria-labelledby="about-heading" class="rounded-[10px] border border-solid border-[#2a2e37] bg-[#1a1d24] px-5 py-4">
+        <h2 id="about-heading" class="mb-2">About this layout</h2>
+        <p>Wider than 900px: the three sections sit in three columns.</p>
+        <p>Between 640px and 900px: two columns, and the third section wraps underneath.</p>
+        <p>Narrower than 640px: everything stacks into one column and the navigation links stack vertically.</p>
+      </aside>
+
+
+    </div>
 
   </body>
 </html>
